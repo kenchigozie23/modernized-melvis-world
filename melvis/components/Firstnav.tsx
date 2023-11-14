@@ -8,9 +8,9 @@ import { BsPerson} from "react-icons/bs";
 const Firstnav = () => {
   return (
  
-    <main className='w-full fixed hidden md:flex justify-between items-center px-32 mx-auto border border-b-1 border-t-0 border-l-0 border-gray-300 border-r-0'>
-        <article className='flex justify-between items-center'>
-            <div className='flex justify-between items-center'>
+    <main className='w-full hidden md:flex justify-between items-center lg:px-32 px-10 md:px-10 mx-auto border border-b-1 border-t-0 border-l-0 border-gray-300 border-r-0 '>
+        <article className='lg:flex lg:justify-between lg:items-center grid-cols-1'>
+            <div className='flex lg:justify-center lg:items-center'>
                 <div className='px-2'>
                     <CiMail/>
                 </div>
@@ -33,7 +33,7 @@ const Firstnav = () => {
             <p className='pr-3 text-sm'>Login</p>
           </div>
           <div>
-            <button className='text-sm bg-black text-white border-solid py-2 px-6 font-semibold'>Contact Us</button>
+            <button className='text-sm bg-black text-white border-solid md:py-2 md:px-4 py-2 px-4 font-semibold'>Contact Us</button>
           </div>
         </article>
     </main>
