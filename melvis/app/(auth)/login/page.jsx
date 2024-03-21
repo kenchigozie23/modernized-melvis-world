@@ -1,14 +1,19 @@
+'use client'
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 
 const SignUp = () => {
+  const [universityLevel, setUniversityLevel] = useState('');
+  const universityLevels = ['Freshman', 'Sophomore', 'Junior', 'Senior', 'Graduate'];
+  const [userType, setUserType] = useState('');
+  const userTypes = ['Student', 'Lecturer'];
   return (
     <div className="flex h-screen">
       {/* Left Pane */}
       <div className="hidden lg:flex items-center justify-center flex-1 bg-white text-black">
         <div className="max-w-md text-center">
           
-          <Image src={"/signup.svg"} height={300} width={300} alt='img'/>
+          <Image src={"/signin.svg"} height={300} width={300} alt='img'/>
         </div>
       </div>
       {/* Right Pane */}
@@ -84,6 +89,26 @@ const SignUp = () => {
               />
             </div>
             <div>
+              <label htmlFor="universityLevel" className="block text-sm font-medium text-gray-700">
+                University Level
+              </label>
+              <select
+                id="universityLevel"
+                name="universityLevel"
+                value={universityLevel}
+                onChange={(e) => setUniversityLevel(e.target.value)}
+                className="mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300"
+              >
+                <option value="">Select a level</option>
+                {universityLevels.map((level) => (
+                  <option key={level} value={level}>
+                    {level}
+                  </option>
+                ))}
+              </select>
+            </div>
+            
+            <div>
               <label htmlFor="password" className="block text-sm font-medium text-gray-700">
                 Password
               </label>
@@ -94,6 +119,13 @@ const SignUp = () => {
                 className="mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300"
               />
             </div>
+            <button
+                type="button"
+             
+                className="text-sm text-gray-600 hover:underline"
+              >
+                Forgot Password?
+              </button>
             <div>
               <button
                 type="submit"
