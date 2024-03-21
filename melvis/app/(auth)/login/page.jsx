@@ -5,8 +5,8 @@ import React, { useState } from 'react';
 const SignUp = () => {
   const [universityLevel, setUniversityLevel] = useState('');
   const universityLevels = ['Freshman', 'Sophomore', 'Junior', 'Senior', 'Graduate'];
-  const [userType, setUserType] = useState('');
-  const userTypes = ['Student', 'Lecturer'];
+  // const [userType, setUserType] = useState('');
+  // const userTypes = ['Student', 'Lecturer'];
   return (
     <div className="flex h-screen">
       {/* Left Pane */}
