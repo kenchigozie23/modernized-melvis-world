@@ -2,6 +2,7 @@ import React from 'react'
 import { CiMail } from "react-icons/ci";
 import {CiLocationOn } from "react-icons/ci";
 import { BsPerson} from "react-icons/bs";
+import Link from 'next/link';
 
 
 
@@ -30,7 +31,11 @@ const Firstnav = () => {
             <div className='px-2'>
                 <BsPerson/>
             </div>
-            <p className='pr-3 text-sm'>Login</p>
+            <p className='pr-3 text-sm'>
+              <Link href={"/login"}>
+                  login              
+              </Link>
+            </p>
           </div>
           <div>
             <button className='text-sm bg-black text-white border-solid md:py-2 md:px-4 py-2 px-4 font-semibold'>Contact Us</button>

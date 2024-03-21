@@ -73,7 +73,7 @@ function Secondnav() {
           <div></div>
         </div>
         {/* Nav bar for mobile devices */}
-        <div className="md:hidden flex" onClick={handleNav}>
+        <div className="lg:hidden flex" onClick={handleNav}>
           {
           nav ? ( <AiOutlineClose size={30} />) : ( <AiOutlineMenu size={30} />)
           }
@@ -83,7 +83,7 @@ function Secondnav() {
       <article className="flex justify-between items-center">
         <div className="hidden md:block">
           {/* Search input */}
-          <div className=" rounded-md shadow-sm hidden lg:flex">
+          <div className=" rounded-md shadow-sm hidden lg:flex mx-auto">
             <input
               type="text"
               className=" bg-gray-100   border-none border-gray-300 h-9 px-3 pr-0 rounded-none text-sm focus:outline-none placeholder:text-black"
@@ -96,7 +96,7 @@ function Secondnav() {
         </div>
       </article>
       
-      <div className={nav ? "md:hidden absolute top-[100px] right-0 bottom-0 left-0 flex justify-center items-center w-full h-screen bg-slate-800 text-white ease-in duration-300" : "md:hidden absolute top-[100px] right-0 left-[-100%] flex justify-center items-center w-full h-screen bg-slate-800 text-white text-center ease-in duration-300"}>
+      <div className={nav ? "lg:hidden absolute top-[100px] right-0 bottom-0 left-0 flex justify-center items-center w-full h-screen bg-slate-800 text-white ease-in duration-300" : "md:hidden absolute top-[100px] right-0 left-[-100%] flex justify-center items-center w-full h-screen bg-slate-800 text-white text-center ease-in duration-300"}>
             <div className="w-full">
               <ul>
                 <li onClick={handleNav}>
